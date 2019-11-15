@@ -4,13 +4,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
-// Apollo Graphql Modules
-import { ApolloModule, Apollo } from 'apollo-angular';
-import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
-import { InMemoryCache } from "apollo-cache-inmemory";
-import { GraphQLModule } from './graphql.module';
-
-
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
@@ -70,13 +63,10 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
 
   imports:[
     BrowserModule,
-    HttpClientModule, 
-    ApolloModule,
-    HttpLinkModule,
+    HttpClientModule,     
     ReactiveFormsModule, 
     FormsModule,      
     AppRoutingModule, 
-    GraphQLModule
   ],
 
   providers:[
@@ -89,9 +79,4 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
 
 export class AppModule { 
 
-    // constructor(apollo: Apollo, httpLink: HttpLink){
-    //     apollo.create({
-    //         link: httpLink.create({})
-    //     })
-    // }
 }
